@@ -1,24 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import {
     ButtonsHolder,
-    HomeContainer,
-    MainTitle,
     OptionButton
 } from '../styles/HomeStyles'
+import { Container, MainTitle } from '../styles/Shared';
 
 const Home = () => {
     const navigate = useNavigate();
     
     return (
-        <HomeContainer>
+        <Container>
             <MainTitle>
                 ExamsRepo
             </MainTitle>
             <ButtonsHolder>
-                <OptionButton onClick={() => navigate('/send-exam')}>View Exams</OptionButton>
-                <OptionButton>Send an Exam</OptionButton>
+                <OptionButton>View Exams</OptionButton>
+                <OptionButton onClick={() => navigate('/send-exam')}>Send an Exam</OptionButton>
             </ButtonsHolder>
-        </HomeContainer>
+        </Container>
     )
 };
 

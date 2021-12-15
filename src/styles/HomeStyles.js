@@ -1,23 +1,6 @@
 import styled from "styled-components";
 
 
-const HomeContainer = styled.div `
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: moveInRight .7s;
-
-`
-
-const MainTitle = styled.h1`
-    font-size: 54px;
-    font-family: 'Sawarabi Gothic', sans-serif;
-    color: #fff;
-`
 
 const ButtonsHolder = styled.div`
     display: flex;
@@ -32,11 +15,12 @@ const OptionButton = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 80px 35px 0px 35px;
+    margin: 50px 35px 0px 35px;
     color: #FFFFFF;
     width: 150px;
     height: 60px;
     border-radius: 30px;
+    backface-visibility: hidden; 
 
     &::after{
         content: "";
@@ -67,8 +51,6 @@ const OptionButton = styled.div`
 `
 
 export {
-    HomeContainer,
-    MainTitle,
     ButtonsHolder,
     OptionButton,
 }

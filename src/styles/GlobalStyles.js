@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        backface-visibility: hidden; 
         background-color: #002;
     }
 
