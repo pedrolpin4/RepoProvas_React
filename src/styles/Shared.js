@@ -16,7 +16,6 @@ const Container = styled.div `
     position: relative;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    overflow-y: scroll;
     min-height: 100vh;
     height: 100%;
     width: 100%;
