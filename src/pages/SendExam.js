@@ -1,14 +1,26 @@
-import { MainTitle } from "../styles/Shared";
-import { ExamInput, ExamSelect, SendButton, SendForms } from "../styles/SendExamStyle";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { ErrorMessage, MainTitle } from "../styles/Shared";
+import { ExamInput, SendButton, SendForms } from "../styles/SendExamStyle";
 import { Container } from "../styles/Shared";
-import { MdArrowLeft } from 'react-icons/md'
-import { useState } from "react";
+import { IoArrowBack } from 'react-icons/io5'
+import { useEffect, useState } from "react";
 import * as sendExam from '../services/sendServices'
 import { useNavigate } from "react-router-dom";
+import Options from "../components/Options";
+import validateForm from "../validations/joiValidations";
 
 const SendExam = () => {
     const [name, setName] = useState('');
     const [link, setLink] = useState('');
+    const [categories, setCategories] = useState([]);
+    const [category, setCategory] = useState('');
+    const [subjects, setSubjects] = useState([]);
+    const [subject, setSubject] = useState('');
+    const [profesors, setProfesors] = useState([]);
+    const [profesor, setProfesor] = useState('');
+    const [isCategories, setIsCategories] = useState(false);
+    const [isSubjects, setIsSubjects] = useState(false);
+    const [isProfesors, setIsProfesors] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
 
@@ -17,12 +29,17 @@ const SendExam = () => {
         const forms = {
             name,
             link,
+            categoryId: category.id,
+            subjectId: subject.id,
+            profesorId: profesor.id,
         };
+
+        if(validateForm(forms)) return setErrorMessage(validateForm(forms));
 
         const result = await sendExam.postExam(forms);
 
         if(result.success){
-            navigate('/')
+            navigate('/');
             return;
         }
 
@@ -30,29 +47,53 @@ const SendExam = () => {
         return;
     }
 
+    const getAvailableOptions = async () => {
+        const result = await sendExam.getExam();
+        if(result.success){
+            setSubjects(result.data.subjects);
+            setCategories(result.data.categories);
+            setProfesors(result.data.profesors);
+            return;
+        }
+        
+        setErrorMessage(result.message)
+        return;
+    }
+
+    useEffect(() =>{
+        getAvailableOptions();
+    }, []);
+
+    useEffect(() => {
+        setProfesor('')
+    }, [subject])
+
     return (
         <Container>
-            <MdArrowLeft size = {20}/>
+            <IoArrowBack color="#fff" className = 'return'
+                size = {30} onClick={() => navigate("/")}/>
             <MainTitle>
                 ExamsRepo
             </MainTitle>
             <SendForms onSubmit={submitExam}>
                 <ExamInput placeholder= "Name*" value = {name} onChange={(e) => setName(e.target.value)}/>
                 <ExamInput placeholder= "Link*" value = {link} onChange={(e) => setLink(e.target.value)}/>
-                <ExamSelect>
-                    <p>Categories*</p>
-                </ExamSelect>
-                <ExamSelect>
-                    <p>Subjects*</p>
-                </ExamSelect>
-                <ExamSelect>
-                    <p>Profesors*</p>
-                </ExamSelect>
-                <SendButton>
+                    <Options options = {categories} option = {category} setOption = {setCategory}
+                        isVisible={isCategories} setIsVisible = {setIsCategories} name = {'Categories'}/>
+                    <Options options = {subjects} option = {subject} setOption = {setSubject}
+                        isVisible={isSubjects} setIsVisible = {setIsSubjects} name = {'Subjects'}/>
+                {
+                    subject ?
+                        <Options options = {profesors.filter((prof) => prof.subjectId === subject.id)} option = {profesor} setOption = {setProfesor}
+                            isVisible={isProfesors} setIsVisible = {setIsProfesors}  name = {'Profesors'}/>
+                        :
+                        <></>
+                }
+                <SendButton type = "submit">
                     <p>Send Exam</p>
                 </SendButton>
             </SendForms>
-            <p>{errorMessage}</p>
+            <ErrorMessage>{errorMessage}</ErrorMessage>
         </Container>
     );
 }
