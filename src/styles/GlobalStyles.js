@@ -14,11 +14,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        height: 100vh
+        height: 100%;
         font-family: 'Roboto', sans-serif;
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-x: hidden;
         backface-visibility: hidden; 
         background-color: #002;
     }

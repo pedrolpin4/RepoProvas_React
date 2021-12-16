@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 const ButtonsHolder = styled.div`
     display: flex;
     align-items: center;
@@ -47,6 +45,14 @@ const OptionButton = styled.div`
     &:active{
         transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba(0,0,0, .2);
+    }
+
+    @media (max-width: 450px) {
+        font-size: 16px;
+        margin: 30px 20px 0px 20px;
+        width: 120px;
+        height: 50px;
+        border-radius: 25px;
     }
 `
 
