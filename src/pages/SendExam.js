@@ -61,7 +61,74 @@ const SendExam = () => {
     }
 
     useEffect(() =>{
-        getAvailableOptions();
+        //getAvailableOptions();
+        setCategories([
+            {
+                id: 1,
+                name: 'P1'
+            }, {
+                id: 2,
+                name: 'P2'
+            },{
+                id: 3,
+                name: 'P3'
+            },{
+                id: 4,
+                name: 'P4'
+            },{
+                id: 5,
+                name: '2ch'
+            },
+        ])
+        setSubjects([
+            {
+                id: 1,
+                name: 'Portuguese'
+            }, {
+                id: 2,
+                name: 'Math'
+            },{
+                id: 3,
+                name: 'Chemistry'
+            },{
+                id: 4,
+                name: 'History'
+            },{
+                id: 5,
+                name: 'Robotic'
+            },
+        ])
+        setProfesors([
+            {
+                id: 1,
+                subjectId: 1,
+                name: 'Jair Bolsonaro'
+            }, {
+                id: 2,
+                subjectId: 2,
+                name: 'Dilma Rouseff'
+            },{
+                id: 3,
+                subjectId: 3,
+                name: 'Walter White'
+            },{
+                id: 4,
+                subjectId: 4,
+                name: 'Logan Roy'
+            },{
+                id: 5,
+                subjectId: 5,
+                name: 'Kendal Roy'
+            },{
+                id: 6,
+                subjectId: 1,
+                name: 'Miranha'
+            },{
+                id: 7,
+                subjectId: 1,
+                name: 'Bolinha'
+            },
+        ])
     }, []);
 
     useEffect(() => {
