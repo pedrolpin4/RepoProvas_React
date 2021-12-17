@@ -26,6 +26,11 @@ const ExamInput = styled.input`
     border: none;
     border-radius: 5px;
 
+    :invalid {
+        color: #f00;
+        border: 2px solid #a00;
+    }
+
     ::placeholder {
         font-family: inherit;
         font-size: 24px;

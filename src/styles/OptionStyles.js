@@ -44,7 +44,7 @@ const OptionsContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: scroll;
     transition: all .4s;
     transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};

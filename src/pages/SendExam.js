@@ -29,8 +29,8 @@ const SendExam = () => {
         const forms = {
             name,
             link,
-            category: category,
-            profesor: profesor,
+            categoryId: category.id,
+            profesorId: profesor.id,
         };
 
         if(validateForm(forms)) return setErrorMessage(validateForm(forms));
@@ -75,8 +75,10 @@ const SendExam = () => {
                 ExamsRepo
             </MainTitle>
             <SendForms onSubmit={submitExam}>
-                <ExamInput placeholder= "Name*" value = {name} onChange={(e) => setName(e.target.value)}/>
-                <ExamInput placeholder= "Link*" value = {link} onChange={(e) => setLink(e.target.value)}/>
+                <ExamInput placeholder= "Name*" value = {name} onChange={(e) => setName(e.target.value)} 
+                    pattern=".{3,}" required />
+                <ExamInput placeholder= "Link*" value = {link} onChange={(e) => setLink(e.target.value)} 
+                    pattern=".{10,}" required/>
                     <Options options = {categories} option = {category} setOption = {setCategory}
                         isVisible={isCategories} setIsVisible = {setIsCategories} name = {'Categories'}/>
                     <Options options = {subjects} option = {subject} setOption = {setSubject}

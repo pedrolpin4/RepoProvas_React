@@ -31,12 +31,12 @@ const postExam = async (forms) => {
             if(e.response){
                 if(e.response.status === 400) return{
                     success: false,
-                    message: "Please follow the sign-up instructions"
+                    message: e.response.message
                 }
 
                 if(e.response.status === 409) return{
                     success: false,
-                    message: "Looks like this link has already been registered"
+                    message: e.response.message
                 }
             }
 
