@@ -3,9 +3,13 @@ import styled from "styled-components";
 const ChoicesContainer = styled.div`
     display: flex;
     align-items: center;
+    margin-top: 0px;
 
     @media (max-width: 700px){
         flex-direction: column;
+    }
+    @media (max-width: 500px){
+        margin-top: 80px;
     }
 `
 
@@ -53,6 +57,18 @@ const Choice = styled.div`
         margin: 20px 0;
     }
 
+    @media (max-width: 400px){
+        width: 200px;
+        height: 250px;
+
+        svg{ 
+            font-size: 80px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
 `
 
 export {
