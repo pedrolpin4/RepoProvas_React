@@ -4,8 +4,7 @@ const SelectContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    transition: height .4s;
-    height: ${props => props.isVisible ? 'auto' : '80px'};
+    height: auto;
     overflow: hidden;
 
     .show-options{
@@ -45,14 +44,18 @@ const OptionsContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
     transition: all .4s;
-    height: ${props => props.isVisible ? 'auto' : '0px'};
+    transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};
+    transform-origin: top;
+    height: auto;
     border-radius: 5px;
-    overflow: hidden;
 `
 
 const Option = styled.div`
     cursor: pointer;
+    flex-shrink: 0;
     opacity: ${props => props.isVisible ? '1' : '0'};
     display: flex;
     align-items: center;
@@ -63,7 +66,10 @@ const Option = styled.div`
     height: ${props => props.isVisible ? '50px' : '0px'};
     color: white;
     background: ${props => props.isVisible ? 'rgba(120, 120, 120, 0.3)' : ''};
-    padding: ;
+    
+    :hover{
+        background: rgba(120, 120, 120, 0.5);
+    }
 `
 
 export {
