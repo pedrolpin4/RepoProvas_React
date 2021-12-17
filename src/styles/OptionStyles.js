@@ -13,7 +13,7 @@ const SelectContainer = styled.div`
         top: 35px;
         right: 15px;
         transition: all .4s;
-        transform: ${props => props.isVisible ? 'rotateZ(-180deg)' : 'none'};
+        transform: ${props => props.isVisible ? 'rotateX(-180deg)' : 'none'};
     }
 `
 

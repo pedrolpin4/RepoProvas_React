@@ -30,7 +30,16 @@ const Container = styled.div `
         position: absolute;
         top: 30px;
         left: 0px; 
+        font-size: 40px;
         cursor: pointer;
+    }
+
+    @media (max-width: 700px){
+        width: 100vw;
+
+        .return {
+            left: 30px; 
+        }
     }
 `
 

@@ -71,7 +71,7 @@ const SendExam = () => {
     return (
         <Container>
             <IoArrowBack color="#fff" className = 'return'
-                size = {30} onClick={() => navigate("/")}/>
+                onClick={() => navigate("/")}/>
             <MainTitle>
                 ExamsRepo
             </MainTitle>

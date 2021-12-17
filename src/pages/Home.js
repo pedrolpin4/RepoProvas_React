@@ -14,7 +14,7 @@ const Home = () => {
                 ExamsRepo
             </MainTitle>
             <ButtonsHolder>
-                <OptionButton>View Exams</OptionButton>
+                <OptionButton onClick={() => navigate('/view-choices')}>View Exams</OptionButton>
                 <OptionButton onClick={() => navigate('/send-exam')}>Send an Exam</OptionButton>
             </ButtonsHolder>
         </Container>
