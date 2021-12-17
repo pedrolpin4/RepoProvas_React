@@ -29,9 +29,8 @@ const SendExam = () => {
         const forms = {
             name,
             link,
-            categoryId: category.id,
-            subjectId: subject.id,
-            profesorId: profesor.id,
+            category: category,
+            profesor: profesor,
         };
 
         if(validateForm(forms)) return setErrorMessage(validateForm(forms));
@@ -49,7 +48,7 @@ const SendExam = () => {
 
     const getAvailableOptions = async () => {
         const result = await sendExam.getExam();
-        if(result.success){
+        if(result.success) {
             setSubjects(result.data.subjects);
             setCategories(result.data.categories);
             setProfesors(result.data.profesors);
@@ -84,7 +83,7 @@ const SendExam = () => {
                         isVisible={isSubjects} setIsVisible = {setIsSubjects} name = {'Subjects'}/>
                 {
                     subject ?
-                        <Options options = {profesors.filter((prof) => prof.subjectId === subject.id)} option = {profesor} setOption = {setProfesor}
+                        <Options options = {profesors.filter((prof) => prof.subject.id === subject.id)} option = {profesor} setOption = {setProfesor}
                             isVisible={isProfesors} setIsVisible = {setIsProfesors}  name = {'Profesors'}/>
                         :
                         <></>
