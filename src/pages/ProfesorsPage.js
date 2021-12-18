@@ -32,7 +32,6 @@ const ProfesorsPage = () => {
 
     useEffect(() => {
         handleProfRequisition();
-        setProfesors();
     }, []);
 
     return(
