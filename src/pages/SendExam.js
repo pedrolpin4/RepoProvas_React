@@ -42,6 +42,8 @@ const SendExam = () => {
             return;
         }
 
+        console.log(result);
+
         setErrorMessage(result.message)
         return;
     }

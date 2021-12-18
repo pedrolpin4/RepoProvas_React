@@ -36,7 +36,7 @@ const postExam = async (forms) => {
 
                 if(e.response.status === 409) return{
                     success: false,
-                    message: e.response.message
+                    message: 'Looks like this link has already been registered'
                 }
             }
 
