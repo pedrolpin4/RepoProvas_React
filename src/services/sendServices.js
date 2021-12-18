@@ -3,7 +3,6 @@ import API from "./api"
 const getExam = async () => {
     const response = await API.get('/exams')
         .catch(e =>{
-            console.log(e.response);
             if(e.response){
                 if(e.response.status === 400) return{
                     success: false,
@@ -25,7 +24,6 @@ const getExam = async () => {
 }
 
 const postExam = async (forms) => {
-    console.log(forms);
     const response = await API.post('/exams', forms)
         .catch(e =>{
             if(e.response){

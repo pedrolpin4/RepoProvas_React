@@ -30,6 +30,7 @@ const SendExam = () => {
             name,
             link,
             categoryId: category.id,
+            subjectId: subject.id,
             profesorId: profesor.id,
         };
 

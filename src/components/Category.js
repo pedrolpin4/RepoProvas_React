@@ -4,7 +4,6 @@ import { CategorySelector, ExamName, ExamsContainer, VisitButton } from "../styl
 
 const Category = ({ category, profesor, isVisible }) => {
     const [ examIsVisible, setExamIsVisible ] = useState(false);
-    console.log(profesor.exams);
     
     return (
         <>

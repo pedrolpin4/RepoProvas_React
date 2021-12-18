@@ -41,7 +41,7 @@ const ProfesorsPage = () => {
                     <Loading spinnerSize={120} />
                 :
                 <Container>
-                    <IoArrowBack className = 'return-filters' color="#fff" onClick = {() => navigate('/')} />
+                    <IoArrowBack className = 'return-filters' color="#fff" onClick = {() => navigate('/view-choices')} />
                     {
                         errorMessage ? 
                         <ErrorMessage>{ errorMessage }</ErrorMessage> :
