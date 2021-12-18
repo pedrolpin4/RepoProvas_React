@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import { CategoriesContainer, ProfesorSelector } from "../styles/ProfesorsStyles";
 import Category from "./Category";
 import { IoIosArrowDown } from 'react-icons/io'

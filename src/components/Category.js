@@ -1,5 +1,5 @@
 import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import { CategorySelector, ExamName, ExamsContainer, VisitButton } from "../styles/ProfesorsStyles";
 
 const Category = ({ category, profesor, isVisible }) => {
