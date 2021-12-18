@@ -1,23 +1,25 @@
 import { useState } from "react/cjs/react.development";
-import { CategoriesContainer, ProfesorContainer, ProfesorSelector } from "../styles/ProfesorsStyles";
+import { CategoriesContainer, ProfesorSelector } from "../styles/ProfesorsStyles";
 import Category from "./Category";
+import { IoIosArrowDown } from 'react-icons/io'
 
 const Profesor = ({ profesor, categories }) => {
     const [ isVisible, setIsVisible ] = useState(false)
     
     return (
-        <ProfesorContainer>
-            <ProfesorSelector onClick={() => setIsVisible(!isVisible)}>
+        <>
+            <ProfesorSelector isVisible = {isVisible} onClick={() => setIsVisible(!isVisible)}>
                 <p>{profesor.name} ({profesor.quantity})</p>
+                <IoIosArrowDown size = {30} color = "#fff"/>
             </ProfesorSelector>
             <CategoriesContainer isVisible = {isVisible}>
                 {
-                    categories.map((cat) => (
-                        <Category key={cat.id} cat = {cat}/>
+                    categories.map((category) => (
+                        <Category key={category.id} category = {category} profesor = {profesor} isVisible = {isVisible}/>
                     ))
                 }
             </CategoriesContainer>
-        </ ProfesorContainer>
+        </ >
     )
 };
 

@@ -15,7 +15,7 @@ const MainTitle = styled.h1`
 const Container = styled.div `
     position: relative;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    overflow-x: visible;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -34,9 +34,20 @@ const Container = styled.div `
         cursor: pointer;
     }
 
+    .return-filters {
+        position: absolute;
+        top: 30px;
+        left: -55px; 
+        font-size: 40px;
+        cursor: pointer;
+    }
+
     @media (max-width: 700px){
         width: 100vw;
 
+        .return-filters {
+            left: 30px; 
+        }
         .return {
             left: 30px; 
         }

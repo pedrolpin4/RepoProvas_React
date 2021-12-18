@@ -5,11 +5,13 @@ import Profesor from "../components/Profesor";
 import { useEffect, useState } from "react/cjs/react.development";
 import { getProfesors } from "../services/profesorServices";
 import Loading from "../components/Loading";
+import { ProfesorContainer } from "../styles/ProfesorsStyles";
 
 
 const ProfesorsPage = () => {
     const navigate = useNavigate();
     const [profesors, setProfesors] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [ errorMessage, setErrorMessage ] = useState('')
 
@@ -17,7 +19,8 @@ const ProfesorsPage = () => {
         const result = await getProfesors();
 
         if(result.success){
-            setProfesors(result.data);
+            setProfesors(result.data.profesors);
+            setCategories(result.data.categories);
             setIsLoading(false);
             return;
         }
@@ -39,13 +42,17 @@ const ProfesorsPage = () => {
                     <Loading spinnerSize={120} />
                 :
                 <Container>
-                    <IoArrowBack className = 'return' color="#fff" onClick = {() => navigate('/')} />
+                    <IoArrowBack className = 'return-filters' color="#fff" onClick = {() => navigate('/')} />
                     {
                         errorMessage ? 
                         <ErrorMessage>{ errorMessage }</ErrorMessage> :
-                        profesors.map((prof) => (
-                            <Profesor key = {prof.id} profesor = {prof}/>
-                        ))
+                        <ProfesorContainer>
+                        {
+                            profesors.map((prof) => (
+                                <Profesor key = {prof.id} profesor = {prof} categories= {categories}/>
+                            ))
+                        }
+                        </ ProfesorContainer>
                     }
                 </Container>
 
