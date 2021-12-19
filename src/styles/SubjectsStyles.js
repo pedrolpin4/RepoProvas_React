@@ -15,6 +15,14 @@ const NameHolder = styled.div`
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
+
+    @media(max-width: 450px){
+        width: 350px;
+    }
+
+    @media(max-width: 380px){
+        width: 300px;
+    }
 `
 
 export {

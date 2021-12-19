@@ -11,6 +11,14 @@ const EntitySelector = styled.div`
     background-color: transparent;
     border-radius: 5px;
 
+    @media(max-width: 450px){
+        width: 350px;
+    }
+
+    @media(max-width: 380px){
+        width: 300px;
+    }
+
     :hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
@@ -42,7 +50,7 @@ const CategoriesContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 100%;
     max-height: 600px;
     overflow-y: scroll;
     transition: all .4s;
@@ -61,7 +69,7 @@ const CategorySelector = styled.div`
     display: flex;
     align-items: center;
     padding: 0px 15px 0px 30px;
-    width: 400px;
+    width: 100%;
     transition: all .4s;
     min-height: ${props => props.isVisible ? '50px' : '0px'};
     height: ${props => props.isVisible ? 'auto' : '0px'};
@@ -86,7 +94,7 @@ const ExamsContainer = styled.div`
     opacity: ${props => props.examIsVisible ? '1' : '0'};
     align-items: center;
     overflow-y: scroll;
-    width: 400px;
+    width: 100%;
     transition: all .4s;
     max-height: 100px;
     transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
@@ -118,7 +126,7 @@ const SemestersName = styled.p`
     }
 
     @media(max-width: 450px){
-        font-size: 35px;
+        font-size: 26px;
         margin-bottom: 30px;
     }
 `
