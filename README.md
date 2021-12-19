@@ -1,7 +1,8 @@
 # ExamsRepo
 
+
 <p align="center" >
- <img src = "" height = "500px"/>
+ <img src = "https://user-images.githubusercontent.com/87671165/146680129-efd0d72a-41f8-4541-b34c-f8b1ab27e319.gif" height = "500px"/>
 </p>
 
 ## About
@@ -34,7 +35,7 @@ Tell me, don't you hate some college profesors that seem to do absolutely nothin
  ```
  5. Finally access http://localhost:3000 on your favorite browser
     
- 6. If you want to run my Back end repository too, check it out on https://github.com/pedrolpin4/MyWallet_BackEnd
+ 6. If you want to run my Back end repository too, check it out on https://github.com/pedrolpin4/RepoProvas_BackEnd
 
 ## What comes next?
 
