@@ -14,7 +14,7 @@ const ViewChoices = () => {
             <ChoicesContainer>
                 <Choice onClick = {() => navigate('/profesors')}>
                     <FcGraduationCap color="#fff"/>
-                    <p>View by Profesor</p>
+                    <p>View by Professor</p>
                 </Choice>
                 <Choice onClick = {() => navigate('/subjects')}>
                     <FcSurvey color="#fff"/>
