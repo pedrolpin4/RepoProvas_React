@@ -15,15 +15,6 @@ const NameHolder = styled.div`
     align-items: center;
     justify-content: space-between;
     border-radius: 5px;
-
-    svg {
-        transition: all .4s;
-        transform: ${props => props.isVisible ? 'rotateX(-180deg)' : 'none'};
-    }
-
-    :hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
 `
 
 export {

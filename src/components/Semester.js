@@ -1,15 +1,12 @@
 import { NameHolder, SemesterContainer } from "../styles/SubjectsStyles";
 import Entity from "../components/Entity";
 import { EntityContainer, SemestersName } from "../styles/EntityStyles";
-import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react";
 
 const Semester = ({ semester, categories, subjects }) => {
-    const [isVisible, setIsVisible] = useState(false);
     
     return (
-        <SemesterContainer isVisible = {isVisible}>
-            <NameHolder isVisible = {isVisible} onClick = {() => setIsVisible(!isVisible)}>
+        <SemesterContainer >
+            <NameHolder>
                 {
                     Number(semester.name) ?
                         <SemestersName> {semester.name} 
@@ -19,12 +16,11 @@ const Semester = ({ semester, categories, subjects }) => {
                         </SemestersName> :
                         <SemestersName>{semester.name}</SemestersName>  
                 }
-                <IoIosArrowDown size = {30} color = {'#77f'} />
             </NameHolder>
-            <EntityContainer isVisible = {isVisible}>
+            <EntityContainer>
                 {
                     subjects.filter(sub => sub.periodId === semester.id).map((subject) => (
-                        <Entity entityIsVisible = { isVisible } key = {subject.id} entity = {subject} categories= {categories}/>
+                        <Entity key = {subject.id} entity = {subject} categories= {categories}/>
                     ))
                 }
             </EntityContainer>

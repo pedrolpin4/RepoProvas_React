@@ -9,7 +9,6 @@ const EntitySelector = styled.div`
     width: 400px;
     font-size: 20px;
     background-color: transparent;
-    min-height: ${props => props.entityIsVisible ? '50px' : '0px'};
     border-radius: 5px;
 
     :hover {
@@ -32,8 +31,6 @@ const EntityContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: all .4s;
-    transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};
     transform-origin: top;
     border-radius: 5px;
 `

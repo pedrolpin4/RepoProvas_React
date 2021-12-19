@@ -3,12 +3,12 @@ import { CategoriesContainer, EntitySelector } from "../styles/EntityStyles";
 import Category from "./Category";
 import { IoIosArrowDown } from 'react-icons/io'
 
-const Entity = ({ entity, categories, entityIsVisible }) => {
+const Entity = ({ entity, categories }) => {
     const [ isVisible, setIsVisible ] = useState(false)
     
     return (
         <>
-            <EntitySelector entityIsVisible = {entityIsVisible} onClick={() => setIsVisible(!isVisible)}>
+            <EntitySelector onClick={() => setIsVisible(!isVisible)}>
                 <p>{entity.name} ({entity.quantity})</p>
                 <IoIosArrowDown size = {30} color = "#fff"/>
             </EntitySelector>

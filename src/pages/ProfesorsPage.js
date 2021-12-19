@@ -48,7 +48,7 @@ const ProfesorsPage = () => {
                         <EntitiesContainer>
                         {
                             profesors.map((prof) => (
-                                <Entity entityVisible = {true} key = {prof.id} entity={prof} categories= {categories}/>
+                                <Entity key = {prof.id} entity={prof} categories= {categories}/>
                             ))
                         }
                         </ EntitiesContainer>
