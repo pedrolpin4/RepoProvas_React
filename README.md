@@ -1,8 +1,7 @@
 # ExamsRepo
 
-
 <p align="center" >
- <img src = "https://user-images.githubusercontent.com/87671165/146680129-efd0d72a-41f8-4541-b34c-f8b1ab27e319.gif" height = "500px"/>
+ <img src = "https://user-images.githubusercontent.com/87671165/146681180-a720d0e5-e060-4e74-9207-09ae5e01ef0b.gif" height = "500px"/>
 </p>
 
 ## About
@@ -39,7 +38,7 @@ Tell me, don't you hate some college profesors that seem to do absolutely nothin
 
 ## What comes next?
 
-- On the next versions you'll be to host not only the link, but also the file within the app database;
+- On the next versions you'll be able to host not only the link, but also the file within the app database;
 
 ## Tecnologies I Used
 
