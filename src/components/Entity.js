@@ -8,7 +8,7 @@ const Entity = ({ entity, categories }) => {
     
     return (
         <>
-            <EntitySelector onClick={() => setIsVisible(!isVisible)}>
+            <EntitySelector isVisible = {isVisible} onClick={() => setIsVisible(!isVisible)}>
                 <p>{entity.name} ({entity.quantity})</p>
                 <IoIosArrowDown size = {30} color = "#fff"/>
             </EntitySelector>

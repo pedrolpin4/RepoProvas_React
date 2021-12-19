@@ -17,6 +17,7 @@ const EntitySelector = styled.div`
 
     svg {
         transition: all .4s;
+        transform: ${props => props.isVisible ? 'rotateX(-180deg)' : 'rotateX(0)'};
     }
 
     p{
