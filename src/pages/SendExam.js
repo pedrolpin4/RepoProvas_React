@@ -85,8 +85,9 @@ const SendExam = () => {
                         isVisible={isSubjects} setIsVisible = {setIsSubjects} name = {'Subjects'}/>
                 {
                     subject ?
-                        <Options options = {profesors.filter((prof) => prof.subject.id === subject.id)} option = {profesor} setOption = {setProfesor}
-                            isVisible={isProfesors} setIsVisible = {setIsProfesors}  name = {'Profesors'}/>
+                        <Options options = {profesors.filter((prof) => prof.profesorSubject.some(ps => ps.subjectId  === subject.id))}
+                             option = {profesor} setOption = {setProfesor}  name = {'Profesors'}
+                            isVisible={isProfesors} setIsVisible = {setIsProfesors}/>
                         :
                         <></>
                 }
