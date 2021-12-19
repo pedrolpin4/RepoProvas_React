@@ -12,6 +12,21 @@ const MainTitle = styled.h1`
     }
 `
 
+const EntitiesContainer = styled.div`
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    margin: 120px 0px 50px 0px;
+    width: 400px
+
+    @media(max-width: 450px){
+        width: 300px
+    }
+`
+
 const Container = styled.div `
     position: relative;
     font-family: 'Roboto', sans-serif;
@@ -63,4 +78,5 @@ export {
     Container,
     MainTitle,
     ErrorMessage,
+    EntitiesContainer,
 }

@@ -1,11 +1,11 @@
 import { Container, ErrorMessage } from "../styles/Shared";
 import { IoArrowBack } from 'react-icons/io5'
 import { useNavigate } from "react-router-dom";
-import Profesor from "../components/Profesor";
 import { useEffect, useState } from "react";
 import { getProfesors } from "../services/profesorServices";
 import Loading from "../components/Loading";
-import { ProfesorContainer } from "../styles/ProfesorsStyles";
+import { EntitiesContainer } from "../styles/Shared";
+import Entity from "../components/Entity";
 
 
 const ProfesorsPage = () => {
@@ -45,13 +45,13 @@ const ProfesorsPage = () => {
                     {
                         errorMessage ? 
                         <ErrorMessage>{ errorMessage }</ErrorMessage> :
-                        <ProfesorContainer>
+                        <EntitiesContainer>
                         {
                             profesors.map((prof) => (
-                                <Profesor key = {prof.id} profesor = {prof} categories= {categories}/>
+                                <Entity entityVisible = {true} key = {prof.id} entity={prof} categories= {categories}/>
                             ))
                         }
-                        </ ProfesorContainer>
+                        </ EntitiesContainer>
                     }
                 </Container>
 

@@ -16,7 +16,7 @@ const ViewChoices = () => {
                     <FcGraduationCap color="#fff"/>
                     <p>View by Profesor</p>
                 </Choice>
-                <Choice onClick = {() => navigate('/profesors')}>
+                <Choice onClick = {() => navigate('/subjects')}>
                     <FcSurvey color="#fff"/>
                     <p>View by Subject</p>
                 </Choice>

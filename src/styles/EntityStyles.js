@@ -1,34 +1,21 @@
 import styled from "styled-components";
 
-const ProfesorContainer = styled.div`
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    overflow: hidden;
-    margin: 120px 0px 50px 0px;
-    width: 400px
-
-    @media(max-width: 450px){
-        width: 300px
-    }
-`
-
-const ProfesorSelector = styled.div`
+const EntitySelector = styled.div`
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin-top: 7px;
     padding: 15px;
     width: 400px;
-    height: 60px;
+    height: auto;
     font-size: 20px;
     background-color: transparent;
     outline: none;
     border: none;
     border-radius: 5px;
     transition: all .4s;
+    transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
+    transform-origin: top;
 
     :hover {
         background-color: rgba(255, 255, 255, 0.1);
@@ -36,14 +23,32 @@ const ProfesorSelector = styled.div`
 
     svg {
         transition: all .4s;
+        transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
         transform: ${props => props.isVisible ? 'rotateX(-180deg)' : 'none'};
     }
 
     p{
         opacity: 1;
+        transition: all .4s;
+        transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
         color: #fff;
     }
 `
+
+const EntityContainer = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    height: ${props => props.isVisible ? 'auto' : '0px'};
+    transition: all .4s;
+    transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};
+    transform-origin: top;
+    border-radius: 5px;
+`
+
 
 const CategoriesContainer = styled.div`
     align-self: center;
@@ -115,6 +120,22 @@ const ExamsContainer = styled.div`
     }
 `
 
+const SemestersName = styled.p`
+    font-size: 24px;
+    margin: 10px 0px 15px 0px;
+    color: #77f;
+
+    sup { 
+        vertical-align: super;
+        font-size: smaller;
+    }
+
+    @media(max-width: 450px){
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+`
+
 const ExamName = styled.a`
     text-transform: capitalize;
     transition: all .4s;
@@ -167,11 +188,12 @@ const VisitButton = styled.a`
 `
 
 export {
-    ProfesorContainer,
-    ProfesorSelector,
+    EntitySelector,
     CategoriesContainer,
     CategorySelector,
     ExamsContainer,
+    EntityContainer,
     ExamName,
     VisitButton,
+    SemestersName,
 }
