@@ -6,14 +6,14 @@
 
 ## About
 
-Tell me, don't you hate some college profesors that seem to do absolutely nothing and are there just to mess with you and don't give the information you need for your carreer? Well, those are the ones who repeat some exams 'cause they are sick and tired to make new ones. Therefore, I've created an app to host their previous exams, so you can practice a little bit and mock the system. Try the production version here: <a href = "https://repo-provas-react.vercel.app" target ="_blank">Click Me!!</a>
+Tell me, don't you hate some college professors that seem to do absolutely nothing and are there just to mess with you and don't give the information you need for your carreer? Well, those are the ones who repeat some exams 'cause they are sick and tired to make new ones. Therefore, I've created an app to host their previous exams, so you can practice a little bit and mock the system. Try the production version here: <a href = "https://repo-provas-react.vercel.app" target ="_blank">Click Me!!</a>
 
 <br/>
 
 ## Features
 
 - [x] send an exam using an internet link
-- [x] see all exams grouped by profesor
+- [x] see all exams grouped by professor
 - [x] see all exams grouped by subject
 - [x] navigate through the website with animations and nice UI/UX
 
