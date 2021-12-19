@@ -15,7 +15,6 @@ const getExam = async () => {
             }
         })
 
-    console.log(response);
     if(response.data) return {
         success: true,
         data: response.data,
