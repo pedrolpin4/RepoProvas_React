@@ -8,13 +8,14 @@ const Semester = ({ semester, categories, subjects }) => {
     const [isVisible, setIsVisible] = useState(false);
     
     return (
-        <SemesterContainer>
+        <SemesterContainer isVisible = {isVisible}>
             <NameHolder isVisible = {isVisible} onClick = {() => setIsVisible(!isVisible)}>
                 {
                     Number(semester.name) ?
                         <SemestersName> {semester.name} 
                             <sup>{ Number(semester.name) === 1 ? 'st ' :
-                            Number(semester.name) === 2 ? 'nd ' : 'th '}</sup>  semester 
+                            Number(semester.name) === 2 ? 'nd ' : 
+                            Number(semester.name) === 3 ? 'rd ' : 'th '}</sup>  semester 
                         </SemestersName> :
                         <SemestersName>{semester.name}</SemestersName>  
                 }
@@ -23,7 +24,7 @@ const Semester = ({ semester, categories, subjects }) => {
             <EntityContainer isVisible = {isVisible}>
                 {
                     subjects.filter(sub => sub.periodId === semester.id).map((subject) => (
-                        <Entity examIsVisible={isVisible} key = {subject.id} entity = {subject} categories= {categories}/>
+                        <Entity entityIsVisible = { isVisible } key = {subject.id} entity = {subject} categories= {categories}/>
                     ))
                 }
             </EntityContainer>

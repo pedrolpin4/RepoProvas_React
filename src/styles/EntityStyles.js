@@ -7,15 +7,10 @@ const EntitySelector = styled.div`
     margin-top: 7px;
     padding: 15px;
     width: 400px;
-    height: auto;
     font-size: 20px;
     background-color: transparent;
-    outline: none;
-    border: none;
+    min-height: ${props => props.entityIsVisible ? '50px' : '0px'};
     border-radius: 5px;
-    transition: all .4s;
-    transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
-    transform-origin: top;
 
     :hover {
         background-color: rgba(255, 255, 255, 0.1);
@@ -23,14 +18,11 @@ const EntitySelector = styled.div`
 
     svg {
         transition: all .4s;
-        transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
-        transform: ${props => props.isVisible ? 'rotateX(-180deg)' : 'none'};
     }
 
     p{
         opacity: 1;
         transition: all .4s;
-        transform: ${props => props.examIsVisible ? 'scaleY(1)' : 'scaleY(0)'};
         color: #fff;
     }
 `
@@ -40,9 +32,6 @@ const EntityContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-height: 600px;
-    overflow-y: scroll;
-    height: ${props => props.isVisible ? 'auto' : '0px'};
     transition: all .4s;
     transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};
     transform-origin: top;

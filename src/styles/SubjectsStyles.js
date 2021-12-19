@@ -4,6 +4,7 @@ const SemesterContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
     margin-bottom: 10px;
 `
 

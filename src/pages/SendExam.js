@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { ErrorMessage, MainTitle } from "../styles/Shared";
 import { ExamInput, SendButton, SendForms } from "../styles/SendExamStyle";
 import { Container } from "../styles/Shared";
@@ -38,12 +37,10 @@ const SendExam = () => {
 
         const result = await sendExam.postExam(forms);
 
-        if(result.success){
+        if(result.success) {
             navigate('/');
             return;
         }
-
-        console.log(result);
 
         setErrorMessage(result.message)
         return;
