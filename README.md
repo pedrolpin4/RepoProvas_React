@@ -1,12 +1,12 @@
 # ExamsRepo
 
 <p align="center" >
- <img src = "https://user-images.githubusercontent.com/87671165/143910821-ba9a6a81-578b-46a0-86e3-355e0bb51072.gif" height = "500px"/>
+ <img src = "" height = "500px"/>
 </p>
 
 ## About
 
-Tell me, don't you hate some college profesors that seem to do absolutely nothing and are there just to mess with you and don't give the information you need for your carreer? Well, those are the ones who repeat some exams 'caus they are sick and tired to make new ones. Therefore, I've created an app to host their previous exams, so you can practice a little bit. Try the production version here: <a href = "https://repo-provas-react.vercel.app" target ="_blank">Click Me!!</a>
+Tell me, don't you hate some college profesors that seem to do absolutely nothing and are there just to mess with you and don't give the information you need for your carreer? Well, those are the ones who repeat some exams 'cause they are sick and tired to make new ones. Therefore, I've created an app to host their previous exams, so you can practice a little bit and mock the system. Try the production version here: <a href = "https://repo-provas-react.vercel.app" target ="_blank">Click Me!!</a>
 
 <br/>
 
