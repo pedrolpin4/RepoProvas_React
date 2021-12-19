@@ -32,13 +32,20 @@ Tell me, don't you hate some college profesors that seem to do absolutely nothin
  ```bash
  npm run build
  ```
- 5. Finally access http://localhost:3000 on your favorite browser
+ 5. Finally, access http://localhost:3000 on your favorite browser
     
  6. If you want to run my Back end repository too, check it out on https://github.com/pedrolpin4/RepoProvas_BackEnd
 
-## What comes next?
 
-- On the next versions you'll be able to host not only the link, but also the file within the app database;
+## Database Architecture
+<p align="center" >
+  <img height="250" alt="Screen Shot 2021-12-19 at 13 08 24" src="https://user-images.githubusercontent.com/87671165/146682028-4ba67242-8f6c-4289-a8cf-e56480fb13e8.png">
+</p>
+
+## Trello's Backlog
+ <p align="center" >
+   <img height="250" alt="Screen Shot 2021-12-19 at 13 18 48" src="https://user-images.githubusercontent.com/87671165/146682300-841a9a0a-8771-414c-9363-da102c27a75a.png">
+ </p>
 
 ## Tecnologies I Used
 
