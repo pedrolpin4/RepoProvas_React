@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const EntitySelector = styled.div`
     cursor: pointer;
-    position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 7px;

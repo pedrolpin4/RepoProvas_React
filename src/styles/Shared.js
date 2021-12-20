@@ -20,7 +20,7 @@ const EntitiesContainer = styled.div`
     height: auto;
     overflow: hidden;
     margin: 120px 0px 50px 0px;
-    width: 400px
+    width: 400px;
 
     @media(max-width: 450px){
         width: 300px
