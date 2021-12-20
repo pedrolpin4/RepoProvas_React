@@ -39,6 +39,7 @@ const EntityContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     transform-origin: top;
     border-radius: 5px;
