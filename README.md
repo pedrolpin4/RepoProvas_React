@@ -1,7 +1,7 @@
 # ExamsRepo
 
 <p align="center" >
- <img src = "https://user-images.githubusercontent.com/87671165/146681180-a720d0e5-e060-4e74-9207-09ae5e01ef0b.gif" height = "500px"/>
+ <img src = "https://user-images.githubusercontent.com/87671165/146682786-5abbd951-90ca-44f2-b8e3-8a291968259e.gif" height = "500px"/>
 </p>
 
 ## About
