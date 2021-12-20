@@ -53,7 +53,6 @@ const CategoriesContainer = styled.div`
     flex-direction: column;
     width: 100%;
     max-height: 600px;
-    overflow-y: scroll;
     transition: all .4s;
     transform: ${props => props.isVisible ? 'scaleY(1)' : 'scaleY(0)'};
     transform-origin: top;
@@ -94,7 +93,6 @@ const ExamsContainer = styled.div`
     flex-shrink: 0;
     opacity: ${props => props.examIsVisible ? '1' : '0'};
     align-items: center;
-    overflow-y: scroll;
     width: 100%;
     transition: all .4s;
     max-height: 100px;
